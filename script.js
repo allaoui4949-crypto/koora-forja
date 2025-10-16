@@ -83,7 +83,30 @@ document.addEventListener("DOMContentLoaded", async () => {
     list.forEach(m => {
       const el = document.createElement("div");
       el.className = "match-card";
-      el.innerHTML = `
+      el.innerHTML = `// Modal elements
+const modal = document.getElementById("matchModal");
+const modalTeams = document.getElementById("modalTeams");
+const modalCompetition = document.getElementById("modalCompetition");
+const modalDate = document.getElementById("modalDate");
+const modalStadium = document.getElementById("modalStadium");
+const modalChannels = document.getElementById("modalChannels");
+const modalNote = document.getElementById("modalNote");
+const closeBtn = modal.querySelector(".close");
+
+// Close handlers
+closeBtn.onclick = () => { modal.style.display = "none"; };
+window.onclick = (event) => { if (event.target == modal) modal.style.display = "none"; };
+
+// click على البطاقة لفتح Modal
+el.addEventListener("click", () => {
+  modalTeams.textContent = `${m.teamA} — ${m.teamB}`;
+  modalCompetition.textContent = `البطولة: ${m.competition} · المنطقة: ${m.region}`;
+  modalDate.textContent = `التاريخ والوقت: ${new Date(m.datetime).toLocaleString("ar-SA",{ weekday:'short', day:'numeric', month:'short', hour:'2-digit', minute:'2-digit' })}`;
+  modalStadium.textContent = m.stadium ? `الملعب: ${m.stadium}` : "";
+  modalChannels.textContent = `القنوات الناقلة: ${m.channels.join(" · ")}`;
+  modalNote.textContent = m.note ? `ملاحظات: ${m.note}` : "";
+  modal.style.display = "block";
+});
         <div class="match-left">
           <div class="teams">
             <div class="team-names"><span>${escapeHtml(m.teamA)}</span>
