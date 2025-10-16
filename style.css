@@ -75,3 +75,43 @@ body{
   .match-right{min-width:auto}
 }
 .loading{color:var(--muted);padding:30px;text-align:center}
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background-color: #0f1724;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  color: var(--text);
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin: 0 0 10px 0;
+  color: var(--accent);
+}
+
+.close {
+  color: var(--muted);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: var(--accent);
+}
