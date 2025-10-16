@@ -1,1 +1,63 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Koora-Forja — مواعيد المباريات</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Koora-Forja: مواعيد المباريات للقنوات العربية والأجنبية - تحديث أسبوعي" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <div class="brand">
+        <img src="logo.png" alt="Koora Forja" class="logo" onerror="this.style.display='none'">
+        <h1>Koora-Forja</h1>
+      </div>
 
+      <div class="controls-top">
+        <div class="tabs">
+          <button class="tab active" data-range="today">اليوم</button>
+          <button class="tab" data-range="tomorrow">غداً</button>
+          <button class="tab" data-range="week">الأسبوع</button>
+        </div>
+
+        <div class="search-wrap">
+          <input id="search" placeholder="بْحَث: فريق، قناة، بطولة..." />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <aside class="left-col">
+      <h3>البطولات / المناطق</h3>
+      <div id="filters" class="filters">
+        <label><input type="checkbox" value="Europe" checked> أوروبا</label>
+        <label><input type="checkbox" value="Africa" checked> أفريقيا</label>
+        <label><input type="checkbox" value="Morocco" checked> المغرب</label>
+        <label><input type="checkbox" value="National" checked> منتخبات</label>
+        <label><input type="checkbox" value="Other" checked> أخرى</label>
+      </div>
+
+      <div class="import-note">
+        <p>تحديث يدوي: عدّل ملف <code>matches.json</code> كل أسبوع.</p>
+      </div>
+    </aside>
+
+    <section class="main-col">
+      <div id="match-list" class="match-list">
+        <div class="loading">جاري تحميل المباريات...</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <small>© 2025 Koora-Forja — تذكير: استعمل فقط القنوات الرسمية</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
