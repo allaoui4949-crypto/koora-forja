@@ -1,1 +1,80 @@
 
+[
+  {
+    "id": 1,
+    "datetime": "2025-10-16T20:00:00Z",
+    "teamA": "برشلونة",
+    "teamB": "ريال مدريد",
+    "competition": "الدوري الإسباني",
+    "region": "Europe",
+    "stadium": "كامب نو",
+    "channels": ["beIN Sports 1", "Movistar+"],
+    "note": ""
+  },
+  {
+    "id": 2,
+    "datetime": "2025-10-16T19:00:00Z",
+    "teamA": "الوداد",
+    "teamB": "الأهلي",
+    "competition": "دوري أبطال إفريقيا",
+    "region": "Africa",
+    "stadium": "محمد الخامس",
+    "channels": ["Arryadia", "ON Time Sports"],
+    "note": ""
+  },
+  {
+    "id": 3,
+    "datetime": "2025-10-17T18:30:00Z",
+    "teamA": "مانشستر سيتي",
+    "teamB": "تشيلسي",
+    "competition": "الدوري الإنجليزي",
+    "region": "Europe",
+    "stadium": "الاتحاد",
+    "channels": ["Sky Sports Main Event", "NBC Sports"],
+    "note": ""
+  },
+  {
+    "id": 4,
+    "datetime": "2025-10-18T21:00:00Z",
+    "teamA": "الرجاء",
+    "teamB": "الفتح الرباطي",
+    "competition": "البطولة المغربية",
+    "region": "Morocco",
+    "stadium": "مركب محمد الخامس",
+    "channels": ["Arryadia"],
+    "note": ""
+  },
+  {
+    "id": 5,
+    "datetime": "2025-10-19T20:45:00Z",
+    "teamA": "إيطاليا",
+    "teamB": "إسبانيا",
+    "competition": "تصفيات المنتخبات",
+    "region": "National",
+    "stadium": "الأوليمبيكو",
+    "channels": ["RAI", "beIN Sports"],
+    "note": ""
+  },
+  {
+    "id": 6,
+    "datetime": "2025-10-20T19:00:00Z",
+    "teamA": "ميلان",
+    "teamB": "يوفنتوس",
+    "competition": "الدوري الإيطالي",
+    "region": "Europe",
+    "stadium": "سان سيرو",
+    "channels": ["DAZN", "Sky Sports Italia"],
+    "note": ""
+  },
+  {
+    "id": 7,
+    "datetime": "2025-10-21T18:00:00Z",
+    "teamA": "الأهلي",
+    "teamB": "صن داونز",
+    "competition": "دوري أبطال إفريقيا",
+    "region": "Africa",
+    "stadium": "القاهرة الدولي",
+    "channels": ["ON Time Sports", "SuperSport"],
+    "note": ""
+  }
+]
