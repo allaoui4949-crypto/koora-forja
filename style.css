@@ -1,1 +1,77 @@
 
+/* Modern responsive design - clean & readable (dark theme with accent) */
+:root{
+  --bg: #0b1220;
+  --panel: #0f1724;
+  --muted: #9fb0c8;
+  --text: #e9f0f7;
+  --accent: #00c176;
+  --card: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Inter", "Cairo", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: radial-gradient(1000px 400px at 10% 10%, rgba(0,0,0,0.25), transparent), var(--bg);
+  color:var(--text);
+  direction: rtl;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* header */
+.site-header{background:linear-gradient(180deg,#071021 0%, #0b1320 100%); padding:18px 12px; border-bottom:1px solid rgba(255,255,255,0.03)}
+.site-header .inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:20px;flex-wrap:wrap;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.brand h1{margin:0;color:var(--accent);font-size:1.3rem;letter-spacing:0.6px}
+.logo{width:46px;height:46px;border-radius:8px;object-fit:cover}
+
+/* controls */
+.controls-top{display:flex;align-items:center;gap:12px}
+.tabs{display:flex;gap:8px}
+.tab{
+  background:#0e1620;border:1px solid rgba(255,255,255,0.02);
+  color:var(--muted);padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:600
+}
+.tab.active{background:var(--accent);color:#001;box-shadow:0 6px 20px rgba(0,193,118,0.12)}
+
+.search-wrap input{
+  padding:9px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);
+  background:rgba(255,255,255,0.02);color:var(--text);min-width:220px;
+}
+
+/* layout */
+.container{max-width:1100px;margin:20px auto;padding:0 12px;display:grid;grid-template-columns:260px 1fr;gap:18px}
+.left-col{background:var(--panel);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+.main-col{min-height:300px}
+
+/* filters */
+.filters label{display:block;color:var(--muted);margin:8px 0;font-weight:600}
+.filters input{margin-left:8px;transform:translateY(2px)}
+
+/* match list */
+.match-list{display:flex;flex-direction:column;gap:12px}
+.match-card{
+  background:var(--card);border:1px solid rgba(255,255,255,0.03);
+  padding:14px;border-radius:12px;display:flex;justify-content:space-between;align-items:center;gap:12px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.3);
+}
+.match-left{display:flex;gap:14px;align-items:center;min-width:0}
+.teams{display:flex;flex-direction:column;gap:6px}
+.team-names{display:flex;gap:10px;align-items:center;font-weight:700;font-size:1rem}
+.team-names .vs{color:var(--muted);font-weight:600}
+.comp{color:var(--muted);font-size:13px}
+.match-right{text-align:left;min-width:160px}
+.time{color:var(--accent);font-weight:800}
+.stadium{color:var(--muted);font-size:13px;margin-top:6px}
+.channels{margin-top:8px;background:rgba(0,0,0,0.2);padding:6px;border-radius:8px;color:#ffdf6b;font-weight:700;font-size:13px}
+
+/* small screens */
+@media (max-width:880px){
+  .container{grid-template-columns:1fr; padding-bottom:60px}
+  .left-col{order:2}
+  .main-col{order:1}
+  .match-right{min-width:auto}
+}
+.loading{color:var(--muted);padding:30px;text-align:center}
